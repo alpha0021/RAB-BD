@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <title>JS Bin</title>
+  <style>
+    body{
+      margin: auto;
+      text-align:center;
+      width:500px;
+    }
+    dl{
+      
+    }
+    dd{
+      margin:0 auto;
+      padding:1em 0;
+    }
+    dt{
+     cursor: pointer;
+     font-weight: bold;
+     font-size:1.5em;
+     background:#e3e3e3;
+     border-bottom: 1px solid #c5c5c5;
+     border-top: 1px solid white;
+     padding:.5em;
+}
+    dt:first-child{
+      border-top:none;
+    }
+    dt:nth-last-child(2){
+      border-top:white;
+    }
+    .hide{display:none;}
+    .design1{
+      font-family:verdana,sans-serif,courier;
+    }
+  </style>
+</head>
+<body>
+     <h class="design1">RAB <br> BATTALIONS</h>
+    <dl>
+        <dt>RAB 1</dt>
+        <dd><p>Composed by uttara ,baridhara and gulshan.
+            battalion hq is in uttara.it was stublished in 
+            2009.since stablishment rab battalions are  doing
+            their best to serve the area.</p></dd>
+      <dt>RAB 2</dt>
+        <dd><p>Composed by uttara ,baridhara and gulshan.
+            battalion hq is in uttara.it was stublished in 
+            2009.since stablishment rab battalions are  doing
+            their best to serve the area.</p>.</dd>
+      <dt>RAB 3</dt>
+        <dd><p>Composed by uttara ,baridhara and gulshan.
+            battalion hq is in uttara.it was stublished in 
+            2009.since stablishment rab battalions are  doing
+            their best to serve the area.</p>.</dd>
+      <dt>RAB 4</dt>
+        <dd><p>Composed by uttara ,baridhara and gulshan.
+            battalion hq is in uttara.it was stublished in 
+            2009.since stablishment rab battalions are  doing
+            their best to serve the area.</p>.</dd>
+      <dt>RAB 5</dt>
+        <dd><p>Composed by uttara ,baridhara and gulshan.
+            battalion hq is in uttara.it was stublished in 
+            2009.since stablishment rab battalions are  doing
+            their best to serve the area.</p></dd>
+    </dl>
+  <script>
+      (function(){
+        $('dd').filter(':nth-child(n+4)').addClass('hide');
+        $('dl').on('mouseenter','dt',function(){
+          $(this)
+            .next()
+              .slideDown(200)
+                 .siblings('dd')
+                    .slideUp(200);
+        });
+      })();
+  </script>
+</body>
+</html>
